@@ -6,6 +6,8 @@ import Cal from './components/Cal'
 import Select from './components/Select';
 import Footer from './components/Footer'
 
+window.calenderData = {};
+
 const App = React.createClass({
   render() {
     return (
