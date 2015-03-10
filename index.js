@@ -1,8 +1,8 @@
 var dates = [
   {
-    id: 1;
-    date: moment();
-    name: 'test';
+    id: 1,
+    date: moment(),
+    name: 'test'
   }
 ];
 
@@ -65,9 +65,9 @@ var Week = React.createClass({
 
 var Day = React.createClass({
   render: function() {
-    var now = moment();
+    var now = moment().utc().toISOString();
     return (
-
+      <p>Placeholder</p>
     );
   }
 })
@@ -75,60 +75,69 @@ var Day = React.createClass({
 var Select = React.createClass({
   render: function() {
     return (
-      
-    );
-  } 
-})
-
-var Cal = React.createClass({
-  render: function() {
-    return <Week/>;
-  }
-});
-
-var Footer = React.createClass({
-  render: function() {
-    return (
-      <footer className="blue lighten-2 page-footer">
-        <div className="container">
+      <div className="row">
+        <form className="col s12">
           <div className="row">
-            <div className="col l6 s12">
-              <h5 className="white-text">Calender</h5>
-              <p className="grey-text text-lighten-4">This is a calender created using react</p>
+            <div class="input-field col s12">
+              <input id="Content" type="text" className="validate">
+                <label for="Content">Content</label>
+              </div>
             </div>
-            <div className="col l4 offset-l2 s12">
-              <h5 className="white-text">Links</h5>
-              <ul>
-                <li><a className="blue waves-effect wave-light btn grey-text text-lighten-3" href="https://github.com/Dleavenworth/React-calendar">GitHub page</a></li>
-                <li><a className="blue waves-effect wave-light btn grey-text text-lighten-3" href="http://facebook.github.io/react/">React</a></li>
-              </ul>
-            </div>
-          </div>
+          </form>
         </div>
-        <div className="footer-copyright">
-          <div className="container">
-            © 2015 Copyright David Leavenworth III
-          </div>
-        </div>
-      </footer>
-    );
-  }
-});
+        );
+        } 
+        })
 
-var App = React.createClass({
-  render: function() {
-    return (
-      <div className='app'>
-        <Header/>
-        <Cal/>
-        <Footer/>
-      </div>
-    )
-  }
-});
+        var Cal = React.createClass({
+          render: function() {
+            return(
+              <Week/>
+              <Day/>
+              <Select/>
+              )
+          }
+        });
 
-React.render(<App/>, document.body);
-/*Psudo code
- * function addDates(date) {
- * dates.push(date);
- * }
+        var Footer = React.createClass({
+          render: function() {
+            return (
+              <footer className="blue lighten-2 page-footer">
+                <div className="container">
+                  <div className="row">
+                    <div className="col l6 s12">
+                      <h5 className="white-text">Calender</h5>
+                      <p className="grey-text text-lighten-4">This is a calender created using react</p>
+                    </div>
+                    <div className="col l4 offset-l2 s12">
+                      <h5 className="white-text">Links</h5>
+                      <ul>
+                        <li><a className="blue waves-effect wave-light btn grey-text text-lighten-3" href="https://github.com/Dleavenworth/React-calendar">GitHub page</a></li>
+                        <li><a className="blue waves-effect wave-light btn grey-text text-lighten-3" href="http://facebook.github.io/react/">React</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className="footer-copyright">
+                  <div className="container">
+                    © 2015 Copyright David Leavenworth III
+                  </div>
+                </div>
+              </footer>
+              );
+          }
+        });
+
+        var App = React.createClass({
+          render: function() {
+            return (
+              <div className='app'>
+                <Header/>
+                <Cal/>
+                <Footer/>
+              </div>
+              )
+          }
+        });
+
+        React.render(<App/>, document.body);
