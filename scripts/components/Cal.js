@@ -7,8 +7,9 @@ export default React.createClass({
   render: function() {
     return(
       <div className='cal'>
-        <Week/>
         <Day/>
+        <Day/>
+        <Week/>
         <Select/>
       </div>
     )

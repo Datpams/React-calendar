@@ -92,6 +92,11 @@ var Select = React.createClass({
         <form className="col s12" onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="input-field col s6">
+<<<<<<< Updated upstream:old/index.js
+=======
+              <i className="mdi-action-view-headline"></i>
+              <input id="textarea1" type="text" className="text validate"></input>
+>>>>>>> Stashed changes:index.js
               <label for="textarea1">Description</label>
               <input ref='desc' id="textarea1" type="text" className="text validate"></input>
             </div>

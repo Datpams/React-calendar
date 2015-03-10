@@ -12,7 +12,6 @@ const App = React.createClass({
       <div className='app'>
         <Header/>
         <Cal/>
-        <Footer/>
       </div>
     );
   }

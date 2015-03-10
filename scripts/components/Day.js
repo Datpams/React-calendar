@@ -10,7 +10,7 @@ export default React.createClass({
 
     return (
       <div className="day" style={style}>
-        <p>{this.props.day}</p>
+        <p>{this.props.day} {now}</p>
         <div className="desc">
           {this.props.desc}
         </div>

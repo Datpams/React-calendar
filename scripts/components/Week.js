@@ -7,6 +7,7 @@ export default React.createClass({
       width: document.body.clientWidth/7
     }
     return (
+     
       <div className="row">
         <div className="date blue lighten-3 col" style={week_style}>
           {moment().format('MMMM Do YYYY')}
