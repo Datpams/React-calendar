@@ -24,9 +24,8 @@ var Header = React.createClass({
 
 var Week = React.createClass({
   render: function() {
-    var pageWidth = $(window).width();
     var week_style = {
-      width: pageWidth/7
+      width: document.body.clientWidth/7
     }
     return (
       <div className="row">
@@ -66,8 +65,18 @@ var Week = React.createClass({
 var Day = React.createClass({
   render: function() {
     var now = moment().utc().toISOString();
+    var style = {
+      width: $(window).width() / 7
+    };
+
     return (
-      <p>Placeholder</p>
+      <div className="day" style={style}>
+        <p>I am a useless P tag</p>
+        <p>{this.props.day}</p>
+        <div className="desc">
+          {this.props.desc}
+        </div>
+      </div>
     );
   }
 })
@@ -78,66 +87,70 @@ var Select = React.createClass({
       <div className="row">
         <form className="col s12">
           <div className="row">
-            <div class="input-field col s12">
-              <input id="Content" type="text" className="validate">
-                <label for="Content">Content</label>
-              </div>
+            <div className="input-field col s6">
+              <i className="mdi-action-view-headline"></i>
+              <input id="textarea1" type="text" className="text validate"></input>
+              
+              <label for="textarea1">Description</label>
             </div>
-          </form>
+          </div>
+        </form>
+      </div>
+    );
+  } 
+})
+
+var Cal = React.createClass({
+  render: function() {
+    return(
+      <div className='cal'>
+        <Week/>
+        <Day/>
+        <Select/>
+      </div>
+    )
+  }
+});
+
+var Footer = React.createClass({
+  render: function() {
+    return (
+      <footer className="blue lighten-2 page-footer">
+        <div className="container">
+          <div className="row">
+            <div className="col l6 s12">
+              <h5 className="white-text">Calender</h5>
+              <p className="grey-text text-lighten-4">This is a calender created using react</p>
+            </div>
+            <div className="col l4 offset-l2 s12">
+              <h5 className="white-text">Links</h5>
+              <ul>
+                <li><a className="blue waves-effect wave-light btn grey-text text-lighten-3" href="https://github.com/Dleavenworth/React-calendar">GitHub page</a></li>
+                <li><a className="blue waves-effect wave-light btn grey-text text-lighten-3" href="http://facebook.github.io/react/">React</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        );
-        } 
-        })
+        <div className="footer-copyright">
+          <div className="container">
+            © 2015 Copyright David Leavenworth III
+          </div>
+        </div>
+      </footer>
+    );
+  }
+});
 
-        var Cal = React.createClass({
-          render: function() {
-            return(
-              <Week/>
-              <Day/>
-              <Select/>
-              )
-          }
-        });
+var App = React.createClass({
+  render: function() {
+    return (
+      <div className='app'>
+        <Header/>
+        <Cal/>
+        <Footer/>
+      </div>
+    )
+  }
+});
 
-        var Footer = React.createClass({
-          render: function() {
-            return (
-              <footer className="blue lighten-2 page-footer">
-                <div className="container">
-                  <div className="row">
-                    <div className="col l6 s12">
-                      <h5 className="white-text">Calender</h5>
-                      <p className="grey-text text-lighten-4">This is a calender created using react</p>
-                    </div>
-                    <div className="col l4 offset-l2 s12">
-                      <h5 className="white-text">Links</h5>
-                      <ul>
-                        <li><a className="blue waves-effect wave-light btn grey-text text-lighten-3" href="https://github.com/Dleavenworth/React-calendar">GitHub page</a></li>
-                        <li><a className="blue waves-effect wave-light btn grey-text text-lighten-3" href="http://facebook.github.io/react/">React</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div className="footer-copyright">
-                  <div className="container">
-                    © 2015 Copyright David Leavenworth III
-                  </div>
-                </div>
-              </footer>
-              );
-          }
-        });
-
-        var App = React.createClass({
-          render: function() {
-            return (
-              <div className='app'>
-                <Header/>
-                <Cal/>
-                <Footer/>
-              </div>
-              )
-          }
-        });
-
-        React.render(<App/>, document.body);
+React.render(<App/>, document.body);
