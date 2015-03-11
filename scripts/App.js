@@ -6,7 +6,11 @@ import Cal from './components/Cal'
 import Select from './components/Select';
 import Footer from './components/Footer'
 
+<<<<<<< Updated upstream
 window.calenderData = {};
+=======
+require('./style.css');
+>>>>>>> Stashed changes
 
 const App = React.createClass({
   render() {
