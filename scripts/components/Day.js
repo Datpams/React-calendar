@@ -10,7 +10,7 @@ export default React.createClass({
     this.refs.form.getDOMNode().style.display = 'none';
   },
   handleChange(e) {
-    localStorage.setItem(this.props.date, e.target.value);
+    localStorage.setItem(this.props.date, this.refs.desc.getDOMNode().value);
     this.setState({desc:e.target.value})
   },
   unhideForm(e) {
@@ -20,7 +20,7 @@ export default React.createClass({
   render() {
     var now = moment().utc().toISOString();
     var style = {
-      width: ($(window).width() - 0) / 7,
+      width: 98 / 7 + 'vw',
       WebkitUserSelect: 'none'
     };
     return (

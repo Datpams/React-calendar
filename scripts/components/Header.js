@@ -3,7 +3,7 @@ import React from 'react';
 export default React.createClass({
   render() {
     return (
-      <div className="navbar-fixed" style={{marginBottom: 50}}>
+      <div className="navbar-fixed">
         <nav className="blue lighten-2">
           <div className="nav-wrapper">
             <a href="#" className="brand-logo center">Calander</a>
