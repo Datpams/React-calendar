@@ -3,11 +3,11 @@ import React from 'react';
 export default React.createClass({
   render() {
     return (
-      <div class="top">
+      <div className="top">
         <nav style={{height: 90}}>
-          <div class="nav-wrapper">
-            <a href="#" class="brand-logo">Calendar</a>
-            <ul id="nav-mobile" class="right-hide-on-med-and-down">
+          <div className="nav-wrapper">
+            <a href="#" className="brand-logo">Calendar</a>
+            <ul id="nav-mobile" className="right-hide-on-med-and-down">
               <li><a href="#"></a></li>
             </ul>
           </div>

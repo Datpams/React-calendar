@@ -5,18 +5,17 @@ import Day from './components/Day';
 import Cal from './components/Cal'
 import Select from './components/Select';
 import Footer from './components/Footer'
+import Side from './components/Side'
 
-<<<<<<< Updated upstream
 window.calenderData = {};
-=======
 require('./style.css');
->>>>>>> Stashed changes
 
 const App = React.createClass({
   render() {
     return (
       <div className='app'>
         <Header/>
+        <Side/>
         <Cal/>
       </div>
     );

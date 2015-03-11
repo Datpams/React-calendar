@@ -5,6 +5,9 @@
 }
 .left {
   position:absolute;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
   left:0; top:92px; bottom: 0;
   width: 178px;
 }
@@ -12,6 +15,4 @@
   position: absolute;
   left:178px; top:92px; right:0; bottom:0;
 }
-
-
 
