@@ -5,7 +5,7 @@ export default React.createClass({
     return (
       <div className="top">
         <div className="navbar-fixed">
-        <nav style={{height: 90}}>
+        <nav className="blue accent-4" style={{height: 90}}>
           <div className="nav-wrapper">
             <a href="#" className="brand-logo">Calendar</a>
             <ul id="nav-mobile" className="right-hide-on-med-and-down">

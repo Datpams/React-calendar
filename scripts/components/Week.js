@@ -5,7 +5,7 @@ import Day from './Day'
 export default React.createClass({
   render() {
     return (
-      <div className="main row">
+      <div className="dayrow main row">
         <Day className="col day" date={moment().utc().format('MM-DD-YYYY')} desc='Description'/>
         <Day className="col day" date={moment().add(1,'day').utc().format('MM-DD-YYYY')} desc='Description'/>
         <Day className="col day" date={moment().add(2,'day').utc().format('MM-DD-YYYY')} desc='Description'/>

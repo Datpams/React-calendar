@@ -24,7 +24,7 @@ export default React.createClass({
       WebkitUserSelect: 'none'
     };
     return (
-      <div className="container main">
+      <div className="main">
       <div className="day col" style={style} onDoubleClick={this.unhideForm}>
         <div className="desc" onDoubleClick={this.handleClick}>
           <p>{this.state.desc}</p>
@@ -33,7 +33,7 @@ export default React.createClass({
         <form style={{display:'none'}} ref='form' onSubmit={this.handleSubmit}>
           <div className="row">
             <div className="input-field col">
-              <label>Description</label>
+              <label>Desc</label>
               <input ref='desc' type="text"
                 className="text validate" value={this.state.desc}
                 onChange={this.handleChange}></input>

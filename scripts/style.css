@@ -15,5 +15,9 @@
   left:178px; top:92px; right:0; bottom:0;
 }
 .day {
+  display:inline-block;
 }
 
+.dayrow {
+  left:178px; top:92px;
+}
