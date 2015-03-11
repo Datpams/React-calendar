@@ -21,10 +21,10 @@ export default React.createClass({
     var now = moment().utc().toISOString();
     var style = {
       width: ($(window).width() - 0) / 7,
-      WebkitUserSelect: 'none'
+      WebkitUserSelect: 'none',
     };
     return (
-      <div className="main">
+      <div className="row main col">
       <div className="day col" style={style} onDoubleClick={this.unhideForm}>
         <div className="desc" onDoubleClick={this.handleClick}>
           <p>{this.state.desc}</p>

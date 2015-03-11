@@ -1,5 +1,4 @@
 .top {
-  position:absolute;
   left:0; right:0;
   height: 92px;
 }
@@ -19,5 +18,4 @@
 }
 
 .dayrow {
-  left:178px; top:92px;
 }

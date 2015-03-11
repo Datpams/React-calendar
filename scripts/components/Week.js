@@ -4,15 +4,15 @@ import Day from './Day'
 
 export default React.createClass({
   render() {
+    var currentDate = '2015-01-01T00:00:00.000Z'
+    // var currentDate = new Date()
+    var dayNodes = []
+    for(var i = 0; i < 365; i++) {
+      dayNodes.push(<Day className="col day" date={moment(currentDate).add(i,'day').utc().format('MM-DD-YYYY')} desc='Description'/>)
+    }
     return (
-      <div className="dayrow main row">
-        <Day className="col day" date={moment().utc().format('MM-DD-YYYY')} desc='Description'/>
-        <Day className="col day" date={moment().add(1,'day').utc().format('MM-DD-YYYY')} desc='Description'/>
-        <Day className="col day" date={moment().add(2,'day').utc().format('MM-DD-YYYY')} desc='Description'/>
-        <Day className="col day" date={moment().add(3,'day').utc().format('MM-DD-YYYY')} desc='Description'/>
-        <Day className="col day" date={moment().add(4,'day').utc().format('MM-DD-YYYY')} desc='Description'/>
-        <Day className="col day" date={moment().add(5,'day').utc().format('MM-DD-YYYY')} desc='Description'/>
-        <Day className="col day" date={moment().add(6,'day').utc().format('MM-DD-YYYY')} desc='Description'/>
+      <div className="container main row">
+        {dayNodes}
       </div>
     );
   }
