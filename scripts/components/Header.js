@@ -4,6 +4,7 @@ export default React.createClass({
   render() {
     return (
       <div className="top">
+        <div className="navbar-fixed">
         <nav style={{height: 90}}>
           <div className="nav-wrapper">
             <a href="#" className="brand-logo">Calendar</a>
@@ -13,6 +14,7 @@ export default React.createClass({
           </div>
         </nav>
       </div>
+    </div>
     );
   }
 });

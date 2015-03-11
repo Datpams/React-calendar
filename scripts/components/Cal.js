@@ -7,7 +7,7 @@ import Select from './Select';
 export default React.createClass({
   render() {
     return(
-      <div className='grey darken-4 cal'>
+      <div className='cal'>
         <Week/>
         <Select/>
       </div>
