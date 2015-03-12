@@ -1,8 +1,11 @@
+//Importing react component
 import React from 'react';
 
+//Exporting
 export default React.createClass({
   render() {
     return (
+      //Regular navbar code nothing special other than its materialize
       <div className="top">
         <div className="navbar-fixed">
         <nav className="blue accent-4" style={{height: 90}}>

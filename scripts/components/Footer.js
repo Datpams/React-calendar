@@ -1,8 +1,11 @@
+//Importing react component
 import React from 'react';
 
+//Exporting
 export default React.createClass({
   render: function() {
     return (
+      //Regular footer code nothing special
       <footer className="blue lighten-2 page-footer">
         <div className="container">
           <div className="row">

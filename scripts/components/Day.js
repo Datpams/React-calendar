@@ -3,7 +3,7 @@ import React from 'react';
 import moment from 'moment';
 //Exporting
 export default React.createClass({
-  //
+  //Creating form hide and unhide animation and running input from user through props
   getInitialState() {
     return {desc: localStorage.getItem(this.props.date) || this.props.desc}
   },
@@ -20,12 +20,14 @@ export default React.createClass({
     this.refs.form.getDOMNode().style.display = 'block'
   },
   render() {
+    //Creating width variable for form to be constant
     var now = moment().utc().toISOString();
     var style = {
       width: ($(window).width() - 0) / 7,
       WebkitUserSelect: 'none',
     };
     return (
+      //Rendering dates and form input
       <div className="row main col">
       <div className="day col" style={style} onDoubleClick={this.unhideForm}>
         <div className="desc" onDoubleClick={this.handleClick}>

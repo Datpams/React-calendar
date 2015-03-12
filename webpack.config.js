@@ -1,3 +1,4 @@
+//Webpack config this is for the application to work 
 var webpack = require('webpack');
 
 module.exports = {

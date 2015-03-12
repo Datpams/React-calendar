@@ -1,8 +1,11 @@
+//Importing react component
 import React from 'react';
 
+//Exporting
 export default React.createClass({
   render() {
     return(
+      //Rendering sidebar with anchor tags for user convinence
       <div className="left container z-depth-2">
         <a href="#01" className="waves-effect waves-blue btn-flat">January</a>
         <a href="#02" className="waves-effect waves-blue btn-flat">Febuary</a>
