@@ -3,7 +3,6 @@ import Header from './components/Header';
 import Week from './components/Week';
 import Day from './components/Day';
 import Cal from './components/Cal'
-import Select from './components/Select';
 import Footer from './components/Footer'
 import Side from './components/Side'
 
