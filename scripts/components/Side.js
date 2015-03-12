@@ -4,8 +4,8 @@ export default React.createClass({
   render() {
     return(
       <div className="left container z-depth-2">
-        <a href="#" className="waves-effect waves-blue btn-flat">January</a>
-        <a href="#" className="waves-effect waves-blue btn-flat">Febuary</a>
+        <a href="#jan" className="waves-effect waves-blue btn-flat">January</a>
+        <a href="#feb" className="waves-effect waves-blue btn-flat">Febuary</a>
         <a href="#" className="waves-effect waves-blue btn-flat">March</a>
         <a href="#" className="waves-effect waves-blue btn-flat">April</a>
         <a href="#" className="waves-effect waves-blue btn-flat">May</a>
