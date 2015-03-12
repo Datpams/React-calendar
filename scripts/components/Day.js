@@ -3,7 +3,8 @@ import React from 'react';
 import moment from 'moment';
 //Exporting
 export default React.createClass({
-  //Creating form hide and unhide animation and running input from user through props
+  //Creating form hide and unhide animation and running input from user through props to display
+  //Also initalizing local storage and making that work
   getInitialState() {
     return {desc: localStorage.getItem(this.props.date) || this.props.desc}
   },
