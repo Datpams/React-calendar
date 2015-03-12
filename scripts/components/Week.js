@@ -4,20 +4,19 @@ import Day from './Day'
 
 export default React.createClass({
   render() {
-    var currentDate = '2015-01-01T00:00:00.000Z'
-    // var currentDate = new Date()
-    var dayNodes = []
-    //January
-    for(var i = 0; i < 31; i++) {
-      dayNodes.push(<Day className="col day" date={moment(currentDate).add(i,'day').utc().format('MM-DD-YYYY')} desc='Description'/>)
-      if(i = 1) {
-        dayNodes.push(<a name="jan"></a>)
-      }
-    }
-    for(var i = 31; i < 59; i++) {
-      dayNodes.push(<Day className="col day" date={moment(currentDate).add(i,'day').utc().format('MM-DD-YYYY')} desc='Description'/>)
-      if(i = 32) {
-        dayNodes.push(<a name="feb"></a>)
+    var initialDate = '2015-01-01T00:00:00.000Z';
+    var dayNodes = [];
+    var monthIDSet = true;
+    var currentMonth = 01;
+    for(var i = 0; i < 365; i++) {
+      var currentDate = moment(initialDate).add(i, 'day').toISOString();
+      var month = moment(currentDate).format('MM');
+      if(monthIDSet) {
+        dayNodes.push(<Day className="col day" id={month} date={moment(currentDate).utc().format('MM-DD-YYYY')} desc='Description'/>);
+        monthIDSet = false;
+        currentMonth = month;
+      } else {
+        dayNodes.push(<Day className="col day" date={moment(currentDate).utc().format('MM-DD-YYYY')} desc='Description'/>);
       }
     }
     return (
