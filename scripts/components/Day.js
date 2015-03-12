@@ -43,10 +43,10 @@ export default React.createClass({
                   className="text validate" value={this.state.desc}
                   onChange={this.handleChange}></input>
               </div>
-          </div>
-        </form>
+            </div>
+          </form>
+        </div>
       </div>
-    </div>
-      );
-      }
-      })
+    );
+  }
+})

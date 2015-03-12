@@ -24,7 +24,7 @@ export default React.createClass({
       //Will render all of the days in each month onto the page
       dayNodes.push(<Day className="col day" date={currentDate} desc='Description'/>)
       currentDate = moment(currentDate).add(1, 'day').utc().format('MM-DD-YYYY')
-    thisYear = moment(currentDate).utc().format('YYYY');
+      thisYear = moment(currentDate).utc().format('YYYY');
     }
     return (
       <div className="container main row">

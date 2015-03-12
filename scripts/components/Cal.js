@@ -9,7 +9,7 @@ export default React.createClass({
     return(
       //Rendering Week componet inside a div
       <div className='cal'>
-      <Week/>
+        <Week/>
       </div>
     )
   }
