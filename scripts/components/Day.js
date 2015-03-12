@@ -30,23 +30,23 @@ export default React.createClass({
     return (
       //Rendering dates and form input
       <div className="row main col">
-      <div className="day col" style={style} onDoubleClick={this.unhideForm}>
-        <div className="desc" onDoubleClick={this.handleClick}>
-          <p>{this.state.desc}</p>
-          <p>{moment(this.props.date).format('MMMM Do YYYY')}</p>
-        </div>
-        <form style={{display:'none'}} ref='form' onSubmit={this.handleSubmit}>
-          <div className="row">
-            <div className="input-field col">
-              <label>Desc</label>
-              <input ref='desc' type="text"
-                className="text validate" value={this.state.desc}
-                onChange={this.handleChange}></input>
-            </div>
+        <div className="day col" style={style} onDoubleClick={this.unhideForm}>
+          <div className="desc" onDoubleClick={this.handleClick}>
+            <p>{this.state.desc}</p>
+            <p>{moment(this.props.date).format('MMMM Do YYYY')}</p>
+          </div>
+          <form style={{display:'none'}} ref='form' onSubmit={this.handleSubmit}>
+            <div className="row">
+              <div className="input-field col">
+                <label>Desc</label>
+                <input ref='desc' type="text"
+                  className="text validate" value={this.state.desc}
+                  onChange={this.handleChange}></input>
+              </div>
           </div>
         </form>
       </div>
     </div>
-    );
-  }
-})
+      );
+      }
+      })
