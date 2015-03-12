@@ -4,16 +4,14 @@ import Day from './Day'
 
 export default React.createClass({
   render() {
-    var initialDate = '2015-01-01T00:00:00.000Z';
+    var initialDate = '2015-01-01';
     var dayNodes = [];
-    var monthIDSet = true;
-    var currentMonth = 01;
+    var currentMonth = 1;
     for(var i = 0; i < 365; i++) {
-      var currentDate = moment(initialDate).add(i, 'day').toISOString();
-      var month = moment(currentDate).format('MM');
-      if(monthIDSet) {
+      var currentDate = moment(initialDate).add(i, 'day')
+      var month = moment(currentDate).format('M');
+      if(currentMonth !== month) {
         dayNodes.push(<Day key={i} className="col day" id={month} date={moment(currentDate).utc().format('MM-DD-YYYY')} desc='Description'/>);
-        monthIDSet = false;
         currentMonth = month;
       } else {
         dayNodes.push(<Day key={i} className="col day" date={moment(currentDate).utc().format('MM-DD-YYYY')} desc='Description'/>);
