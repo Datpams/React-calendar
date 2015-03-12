@@ -1,7 +1,9 @@
+//Importing componets
 import React from 'react';
 import moment from 'moment';
-
+//Exporting
 export default React.createClass({
+  //
   getInitialState() {
     return {desc: localStorage.getItem(this.props.date) || this.props.desc}
   },
