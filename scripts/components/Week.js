@@ -12,11 +12,11 @@ export default React.createClass({
       var currentDate = moment(initialDate).add(i, 'day').toISOString();
       var month = moment(currentDate).format('MM');
       if(monthIDSet) {
-        dayNodes.push(<Day className="col day" id={month} date={moment(currentDate).utc().format('MM-DD-YYYY')} desc='Description'/>);
+        dayNodes.push(<Day key={i} className="col day" id={month} date={moment(currentDate).utc().format('MM-DD-YYYY')} desc='Description'/>);
         monthIDSet = false;
         currentMonth = month;
       } else {
-        dayNodes.push(<Day className="col day" date={moment(currentDate).utc().format('MM-DD-YYYY')} desc='Description'/>);
+        dayNodes.push(<Day key={i} className="col day" date={moment(currentDate).utc().format('MM-DD-YYYY')} desc='Description'/>);
       }
     }
     return (
