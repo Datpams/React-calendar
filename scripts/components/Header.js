@@ -12,7 +12,7 @@ export default React.createClass({
             <div className="nav-wrapper">
               <a href="#" className="brand-logo center">Calendar</a>
               <ul id="nav-mobile" className="right-hide-on-med-and-down">
-                <li><a href="#"></a></li>
+                <li><a href="http://everestps.github.io/third/">Homepage</a></li>
               </ul>
             </div>
           </nav>
