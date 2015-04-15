@@ -4,11 +4,9 @@
   height: 92px;
 }
 .left {
-  position:absolute;
   height: 100%;
   position: fixed;
   overflow: auto;
-  left:0; top:92px; bottom: 0;
   width: 178px;
 }
 .main {
@@ -22,4 +20,19 @@
 .card {
   left: 1000px; top:0; bottom: 0; 
   width: 300px;
+}
+
+.sidenav {
+  width: 8rem;
+}
+
+.date {
+  font-size: 20px;
+  display:inline;
+}
+
+a:hover {
+  color: none;
+  background-color: none;
+  text-decoration: none;
 }

@@ -7,16 +7,16 @@ export default React.createClass({
     return (
       //Regular navbar code nothing special other than its materialize
       <div className="top">
-        <div className="navbar-fixed">
-          <nav className="blue accent-4" style={{height: 90}}>
-            <div className="nav-wrapper">
-              <a href="http://everestps.github.io/third/" className="brand-logo center">Homepage</a>
-              <ul id="nav-mobile" className="right-hide-on-med-and-down">
-              </ul>
-            </div>
-          </nav>
-        </div>
+        <nav className="clearfix white bg-blue" style={{height: 90}}>
+          <div className="sm-col">
+            <a className="button py2 button-transparent" href="http://everestps.github.io/third/tick.html">Tick tack toe</a>
+            <a className="button py2 button-transparent" href="http://everestps.github.io/third/calc.html">Calculator</a>
+          </div>
+          <div className="sm-col-right">
+            <a className="button py2 button-transparent" href="http://everestps.github.io/third/">Home</a>
+          </div> 
+        </nav>
       </div>
-    );
-  }
-});
+        );
+        }
+        });
