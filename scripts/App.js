@@ -6,7 +6,6 @@ import Day from './components/Day';
 import Cal from './components/Cal'
 import Footer from './components/Footer'
 import Side from './components/Side'
-
 window.calenderData = {};
 require('./style.css');
 //Rendering all of the components

@@ -6,7 +6,7 @@ export default React.createClass({
   render: function() {
     return (
       //Regular footer code nothing special
-      <footer className="white bg-blue">
+      <footer className="main white bg-blue">
         <div className="px2 py3 container">
           <div className="clearfix mxn2">
             <div className="col col-6 md-col-3">

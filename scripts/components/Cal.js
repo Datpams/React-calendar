@@ -3,7 +3,6 @@ import React from 'react';
 import moment from 'moment';
 import Week from './Week';
 import Day from './Day';
-import Footer from './Footer';
 //Exporting cal componet
 export default React.createClass({
   render() {
