@@ -40,7 +40,7 @@ export default React.createClass({
               <div className="input-field col">
                 <label>Desc</label>
                 <input ref='desc' type="text"
-                  className="field-light text validate" value={this.state.desc}
+                  className="text validate" value={this.state.desc}
                   onChange={this.handleChange}></input>
               </div>
             </div>
