@@ -12,6 +12,9 @@ export default React.createClass({
             <div className="nav-wrapper">
               <a href="http://everestps.github.io/third/" className="brand-logo center">Homepage</a>
               <ul id="nav-mobile" className="right-hide-on-med-and-down">
+                <li><a href="http://everestps.github.io/third/tick.html">Tick tack toe</a></li>
+                <li><a href="http://everestps.github.io/third/calc.html">Calculator</a></li>
+                <li><a href="http://everestps.github.io/third/vind.html">Vindinium</a></li>
               </ul>
             </div>
           </nav>
